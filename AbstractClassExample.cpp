@@ -2,19 +2,40 @@
 //
 
 #include <iostream>
-
+#include "Triangle.h"
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+	Shape* s = new Triangle();
+
+	Shape* ar = new Triangle[10];
+
+	Shape** ar2 = new Shape * [10];
+
+	ar2[0] = new Triangle();
+
+	Triangle t1;
+
+	Triangle t2;
+
+	//Triangle result = t1 + t2;
+
+	Triangle result;
+
+	result.setBase(t1.getBase() + t2.getBase());
+	result.setHeight(t1.getHeight() + t2.getHeight());
+
+	if (t1.getBase() == t2.getBase() && t1.getHeight() == t2.getHeight())
+	{
+
+
+	}
+
+
+
+
+	// Shape* s2 = new Shape();// can't make an object of an abstract class 
+
+	//Shape* ar3 = new Shape [10];// can't make an array of objects from an abstract class 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
